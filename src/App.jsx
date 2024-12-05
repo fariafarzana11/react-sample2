@@ -28,7 +28,7 @@ function App() {
         },
         {
           path:'/contact/:userId',
-          loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users`),
+          loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
           element: <ContactDetails></ContactDetails>
         },
       ]
